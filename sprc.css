@@ -107,3 +107,52 @@ html{
   .download2{
     width: 18%;
   }
+  .bottomtxt{
+    background-color: black;
+    color: white;
+    padding-top: 2%;
+    padding-left: 5%;
+    width: 100%;
+  }
+  .bottom{
+    background-color: black;
+    vertical-align: baseline;
+  }
+  a:link{
+    text-decoration: none;
+  }
+  .fa {
+    font-size: 300%;
+    width: 27%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 2%;
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+  .fa:hover {
+    opacity: 0.7;
+    color: white;
+  }
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-twitter {
+    background: rgb(92, 195, 255);
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+  .fa-linkedin {
+    background: rgb(96, 115, 155);
+    color: white;
+  }
+  .fa-youtube {
+    background: red;
+    color: white;
+  }

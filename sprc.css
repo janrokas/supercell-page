@@ -121,12 +121,8 @@ html {
     font-weight: bold;
 }
 
-.download1 {
-    width: 20%;
-}
-
-.download2 {
-    width: 18%;
+.download {
+    height: 50px;
 }
 
 .bottomtxt {
@@ -140,6 +136,7 @@ html {
 .bottom {
     background-color: black;
     vertical-align: baseline;
+    padding-bottom: 1em;
 }
 
 a:link {
@@ -147,14 +144,14 @@ a:link {
 }
 
 .fa {
-    font-size: 300%;
-    width: 40%;
-    height: 100%;
+    padding: 0.5em;
+    margin-right: 0.2em;
+    font-size: 2em;
+    width: 3em;
     text-align: center;
-    text-decoration: none;
-    padding-top: 2%;
+    text-decoration: none;   
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 5px;
     float: left;
 }
 .fa:hover {
@@ -165,24 +162,20 @@ a:link {
 .fa-facebook {
     background: #3B5998;
     color: white;
-    width: 25%;
 }
 
 .fa-twitter {
     background: rgb(92, 195, 255);
     color: white;
-    width: 25%;
 }
 
 .fa-instagram {
     background: #3B5998;
-    color: white;
-    width: 25%;
+    color: white; 
 }
 .fa-youtube {
     background: red;
-    color: white;
-    width: 25%;
+    color: white; 
 }
 .margleft{
     margin-left: 5%;

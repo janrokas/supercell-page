@@ -2,3 +2,5 @@ env/
 .idea/
 .vscode/
 db.sqlite3
+sprc/__pycache__/
+myproject/__pycache__/

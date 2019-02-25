@@ -33,12 +33,9 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="snip1217 navbar-nav mr-auto">
-                            <li class="current nav-item"><a class="nav-link" href="#">Brawl Stars</a></li>
-                            <li class="nav-item"><a class="nav-link" href="cr.html">Clash Royale</a></li>
-                            <li class="nav-item"><a class="nav-link" href="coc.html">CLash Of Clans</a></li>
-                            <li class="nav-item"><a class="nav-link" href="hayd.html">Hay Day</a></li>
-                            <li class="nav-item"><a class="nav-link" href="boom.html">Boom Beach</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Blah</a></li>
+                            {% for game in games_list %}
+                            <li class="{% if game.id == gameid %} current {% endif %} nav-item"><a class="nav-link" href="{% url 'game' %}?gameid={{ game.id }}">{{ game.title }}</a></li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </nav>

@@ -11,4 +11,5 @@ def game(request):
     games_list = Game.objects.all()
     gameid = int(request.GET.get('gameid'))
     post_list = Post.objects.filter(game=gameid)
-    return render(request, 'game.html', {'games_list': games_list, 'post_list': post_list, 'gameid': gameid})
+    game = Game.objects.get(id=gameid)
+    return render(request, 'game.html', {'games_list': games_list, 'post_list': post_list, 'gameid': gameid, 'game': game})

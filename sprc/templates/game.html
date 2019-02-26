@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
+{% block title %}
+    {{ game.title }}
+{% endblock %}
 {% block content %}
-{% for game in games_list %}
 <div class="row">
-    <img class="brawl" alt="logo" src="{{ game.mainphoto }}">
+    <div class="col-12">
+        <img class="brawl" alt="logo" src="{{ game.main_photo }}">
+    </div>
 </div>
 <br><br><br><br>
-{% endfor %}
-
 {% for post in post_list %}
 <div class="row">
     <div class="col-5">
@@ -14,17 +16,15 @@
             src="{{ post.photo }}">
     </div>
     <div class="col-7">
-        <h1 class="text1">{{ post.title }}</h1>
-        <p style="font-size: 20px;">
-                {{ post.text }}
+        <h1>{{ post.title }}</h1>
+        <p>
+            {{ post.text }}
         </p>
-
     </div>
 </div>
 <br>
 {% endfor %}
 
-{% for game in games_list %}
 <div class="row">
     <div class="col-5">
     </div>
@@ -35,6 +35,5 @@
                 src="https://i.stack.imgur.com/xHgSL.png"></a>
     </div>
 </div>
-{% endfor %}
 
 {% endblock %}

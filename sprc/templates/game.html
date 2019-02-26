@@ -1,14 +1,14 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="row">
-    <img class="brawl" alt="logo" src="https://gput.jp/wp-content/uploads/2019/01/hero_bg_brawlstars_.jpg">
+    <img class="brawl" alt="logo" src="{{ game.mainphoto }}">
 </div>
 <br><br><br><br>
 {% for post in post_list %}
 <div class="row">
     <div class="col-5">
         <img class="float-left firstline"
-            src="{{post.photo}}">
+            src="{{ post.photo }}">
     </div>
     <div class="col-7">
         <h1 class="text1">{{ post.title }}</h1>
@@ -24,9 +24,9 @@
     <div class="col-5">
     </div>
     <div class="col-7">
-        <a href="https://play.google.com/store/apps/details?id=com.supercell.brawlstars&hl=lt" target="_blank"><img
+        <a href="{{ game.playstore }}" target="_blank"><img
                 class="download" src="https://play.google.com/intl/en_us/badges/images/badge_new.png"></a>
-        <a href="https://itunes.apple.com/ca/app/brawl-stars/id1229016807?mt=8" target="_blank"><img class="download"
+        <a href="{{ game.appstore }}" target="_blank"><img class="download"
                 src="https://i.stack.imgur.com/xHgSL.png"></a>
     </div>
 </div>

@@ -5,7 +5,8 @@
     <img class="brawl" alt="logo" src="{{ game.mainphoto }}">
 </div>
 <br><br><br><br>
-{% endfor}
+{% endfor %}
+
 {% for post in post_list %}
 <div class="row">
     <div class="col-5">
@@ -22,6 +23,7 @@
 </div>
 <br>
 {% endfor %}
+
 {% for game in games_list %}
 <div class="row">
     <div class="col-5">
@@ -34,4 +36,5 @@
     </div>
 </div>
 {% endfor %}
+
 {% endblock %}

@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
+{% for game in games_list %}
 <div class="row">
     <img class="brawl" alt="logo" src="{{ game.mainphoto }}">
 </div>
 <br><br><br><br>
+{% endfor}
 {% for post in post_list %}
 <div class="row">
     <div class="col-5">
@@ -20,6 +22,7 @@
 </div>
 <br>
 {% endfor %}
+{% for game in games_list %}
 <div class="row">
     <div class="col-5">
     </div>
@@ -30,5 +33,5 @@
                 src="https://i.stack.imgur.com/xHgSL.png"></a>
     </div>
 </div>
-
+{% endfor %}
 {% endblock %}

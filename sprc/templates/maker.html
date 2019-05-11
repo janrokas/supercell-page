@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+
+            <br><br><br><br><br><br>
+            <h1 class="deckname">Brawlers</h1>
+            <div class="row">
+            {% for card in cards_list %}
+                <!-- Button trigger modal -->
+                <div class="klijai border">
+                  <button type="button" class="btn btn-dark" 
+                      data-toggle="modal" 
+                      data-target="#exampleModal"
+                      data-name="{{ card.name }}"
+                      data-health="{{ card.health }}"
+                      data-damage="{{ card.damage }}"
+                      data-superp="{{ card.superpow }}"
+                      data-star="{{ card.starpower }}"
+                  >
+                      Info
+                  </button>            
+                  <img  class="brawler" src="{{ card.photo }}">
+                </div>
+            {% endfor %}
+            </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+                <b><h5 class="modal-title"></h5></b>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p class="text-left"><b>Health:</b></p>
+              <p class="text-left modal-health"></p>
+              <p class="text-left"><b>Damage per second:</b></p>
+              <p class="text-left modal-damage"></p>
+              <p class="text-left"><b>Super Power:</b></p>
+              <p class="text-left modal-superp"></b></p>
+              <p class="text-left"><b>Star Power:</b></p>
+              <p class="text-left modal-star"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+{% block javascripts %}
+<script>
+// Get data for modal
+$('#exampleModal').on('show.bs.modal', function (event) {
+  const btn = $(event.relatedTarget); // Button that triggered the modal
+  const name = btn.data('name');
+  const health = btn.data('health');
+  const damage = btn.data('damage');
+  const superp = btn.data('superp');
+  const star = btn.data('star');
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  const modal = $(this)
+  // Replace title
+  modal.find('.modal-title').text(name);
+  modal.find('.modal-health').text(health);
+  modal.find('.modal-damage').text(damage);
+  modal.find('.modal-superp').text(superp);
+  modal.find('.modal-star').text(star);
+});
+</script>   
+{% endblock %} 

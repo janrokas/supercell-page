@@ -119,11 +119,10 @@ html {
 }
 
 .bottom {
-    padding-top: 0.5em;
+    padding-top: 2em;
     background-color: black;
     vertical-align: baseline;
     text-align: left;
-    padding-bottom: 1em;
     color: white;
 }
 
@@ -180,3 +179,15 @@ a:link {
     transform: translate(-50%, -50%);
     font-weight: bold
   }
+.deckname{
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 100px;
+}
+.brawler{
+    height: 300px;
+    width: 80%;
+}
+.klijai{
+    width: 20em;
+}
